@@ -1,0 +1,18 @@
+<section class="resume-section" id="skills">
+  <div class="resume-section-content">
+    <h2 class="mb-5">Conhecimento técnico</h2>
+    <div class="subheading mb-3">Resumo da minha experiência como desenvolvedor</div>
+          
+    <div class="container" *ngIf="stacks; else loading">
+        <app-stack-panel
+          *ngFor="let stack of stacks; index as i" 
+          [stack]="stack">
+        </app-stack-panel>
+    </div>
+
+    <ng-template class="row" #loading>
+      <mat-spinner class="mr-auto ml-auto"></mat-spinner>
+    </ng-template>
+  </div>
+</section>
+<hr class="m-0" />

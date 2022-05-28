@@ -1,0 +1,33 @@
+<div class="container mb-5">
+  <div *ngIf="knowledges; else loading">
+
+    <div class="row">
+      <mat-card 
+        *ngFor="let value of knowledges; index as i"
+        class="card shadow-lg .portfolio .portfolio-item mx-auto mt-5"
+      >
+
+      <mat-card-header>
+        <mat-card-title class="portfolio masthead-subheading">{{ value.title }}</mat-card-title>
+      </mat-card-header>
+
+      <div class="p-3 text-center card-image">
+        <img class="img-fluid" mat-card-image [src]="getBase64AsImage(value.fileData)" [alt]="getAltDescription(value.title)">
+      </div>
+
+      <mat-card-content class="text-center mt-3">
+        <button class="btn btn-light font-weight-bold table thead th border rounded" (click)="openInfo(i)">
+          Ver mais
+          <i class="fas fa-search"></i>
+        </button>
+      </mat-card-content>
+
+    </mat-card>
+
+    </div>
+  </div>
+  
+  <ng-template class="row" #loading>
+    <mat-spinner class="mx-auto"></mat-spinner>
+  </ng-template>
+</div>

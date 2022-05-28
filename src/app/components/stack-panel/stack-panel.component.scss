@@ -1,0 +1,58 @@
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+@media (min-width: 762px) {
+  .stack-title {
+    font-size: 160%;
+  }
+}
+
+@media (max-width: 761px) {
+  .stack-title {
+    font-size: 150%;
+  }
+}
+
+
+@media (max-width: 550px) {
+  .stack-title {
+    font-size: 140%;
+  }
+}
+
+@media (max-width: 530px) {
+  .stack-title {
+    font-size: 130%;
+  }
+}
+
+@media (max-width: 490px) {
+  .stack-title {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 470px) {
+  .stack-title {
+    font-size: 110%;
+  }
+}
+
+@media (max-width: 445px) {
+  .stack-title {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .stack-title {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 310px) {
+  .stack-title {
+    font-size: 70%;
+  }
+}
