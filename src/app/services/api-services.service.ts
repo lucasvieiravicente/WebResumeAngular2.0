@@ -32,7 +32,7 @@ export class ApiServicesService {
     return this.httpClient.get<StackResponse[]>(`${this.baseUrlKnowledge}/V2/Stack/all`);
   }
 
-  sendEmail(email: EmailRequest): Observable<EmailRequest> {
-    return this.httpClient.post<EmailRequest>(`${this.baseUrlEmail}/SendEmail`, JSON.stringify(email), this.httpOptions);
+  sendEmail(email: EmailRequest): Observable<string> {
+    return this.httpClient.post(`${this.baseUrlEmail}/SendEmail`, JSON.stringify(email), { ...this.httpOptions, responseType: 'text' });
   }
 }

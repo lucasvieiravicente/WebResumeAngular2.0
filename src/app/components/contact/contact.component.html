@@ -33,9 +33,9 @@
                 </div>
             </div>
             <br />
-            <div id="success"></div>
+            <div id="success" [innerHtml]="responseMessage" class="mb-3"></div>
             
-            <button class="btn btn-secondary btn-lg" id="sendMessageButton" type="submit">Enviar</button>    
+            <button class="btn btn-secondary btn-lg" id="sendMessageButton" type="submit" [disabled]="disabledButton">Enviar</button>    
         </form>
     </div>
 </section>
