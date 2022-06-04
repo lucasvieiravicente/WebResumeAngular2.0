@@ -892,7 +892,12 @@ progress {
 .gy-5 {
   --bs-gutter-y: 3rem;
 }
-
+@media (max-width: 395px)
+{
+  .subheading {
+    font-size: 60%;
+  }
+}
 @media (min-width: 576px) {
   .col-sm {
     flex: 1 0 0%;
@@ -1104,6 +1109,9 @@ progress {
   .g-sm-5,
 .gy-sm-5 {
     --bs-gutter-y: 3rem;
+  }
+  .subheading {
+    font-size: 80%;
   }
 }
 @media (min-width: 768px) {
@@ -5668,6 +5676,9 @@ textarea.form-control-lg {
   }
   .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
+  }
+  .subheading {
+    font-size: 100%;
   }
 }
 @media (max-width: 767.98px) {
