@@ -14,11 +14,9 @@
                 </mat-expansion-panel-header>
                 
                 <div class="lead m-2 p-4">
-                    <p class="p-1">
-                        <i class="fa-solid fa-circle-question"></i> {{ project.description }}
-                    </p>                    
+                    <p class="lead p-2 text-justified">{{ project.description }}</p>                    
                     <a href="{{ project.url }}" target="_blank">
-                        <button class="btn btn-light font-weight-bold table thead th border rounded">
+                        <button class="btn btn-light table thead th border rounded">
                             <i class="fa-solid fa-code"></i>&nbsp;
                             {{ project.textButton }}
                         </button>
