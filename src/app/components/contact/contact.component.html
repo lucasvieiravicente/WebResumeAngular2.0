@@ -1,33 +1,28 @@
 <section class="resume-section" id="contact">
     <div class="resume-section-content">
-        <!-- Contact Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Entre em contato</h2>
 
         <form id="contactForm" name="sentMessage" [formGroup]="emailFormGroup" (ngSubmit)="sendEmail()">
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <label>Nome</label>
                     <input class="form-control" id="name" type="text" placeholder="Nome" required="required" data-validation-required-message="Por favor digite seu nome." formControlName="name"/>
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <label>E-mail</label>
                     <input class="form-control" id="email" type="email" placeholder="E-mail" required="required" data-validation-required-message="Por favor digite seu e-mail." formControlName="email" />
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <label>Telefone</label>
                     <input class="form-control" id="phone" type="tel" placeholder="Telefone" formControlName="phoneNumber"/>
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <label>Mensagem</label>
                     <textarea class="form-control" id="message" rows="5" placeholder="Mensagem" required="required" data-validation-required-message="Por favor digite uma mensagem." formControlName="body"></textarea>
                     <p class="help-block text-danger"></p>
                 </div>

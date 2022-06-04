@@ -37,8 +37,8 @@ export class AboutProjectComponent {
       new Project(
         "API Email Sender",
         "API para contato no meu e-mail pessoal a partir dos meus projetos (utilizada na aba de contato).",
-        "https://webapiemail.azurewebsites.net/swagger",
-        "Swagger da API"
+        "Swagger da API",
+        "https://webapiemail.azurewebsites.net/swagger"        
       )
     ];
   }
