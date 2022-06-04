@@ -1,86 +1,26 @@
 <section class="resume-section" id="projects">
     <div class="resume-section-content">
         <h2 class="mb-3">Projetos</h2>
-        <div class="subheading mb-3">Projetos pessoais desenvolvidos</div>
+        <div class="subheading mb-3">Projetos pessoais</div>
         <div class="container mb-5">
-            <mat-expansion-panel class="m-4">
-                <mat-expansion-panel-header>
-                <mat-panel-title class="masthead-subheading d-flex justify-content-center">
-                    <span class="text-center subheading m-2">Fatec Mauá Job Newsletter</span>
-                </mat-panel-title>
+            <mat-expansion-panel 
+                class="m-4" 
+                *ngFor="let project of projects; index as i"
+            >
+                <mat-expansion-panel-header [collapsedHeight]="'auto'" [expandedHeight]="'auto'">
+                    <mat-panel-title class="masthead-subheading d-flex justify-content-center">
+                        <span class="text-center subheading m-2">{{ project.title }}</span>
+                    </mat-panel-title>
                 </mat-expansion-panel-header>
                 
                 <div class="lead m-2 p-4">
                     <p class="p-1">
-                        <i class="fa-solid fa-circle-question"></i> MVP de um TCC para a FATEC - Mauá e seus alunos registrar e divulgar as vagas de
-                        emprego e estágio de maneira mais prática (front-end).
+                        <i class="fa-solid fa-circle-question"></i> {{ project.description }}
                     </p>                    
-                    <a href="https://fatecmauajobnewsletterfront.azurewebsites.net" target="_blank">
+                    <a href="{{ project.url }}" target="_blank">
                         <button class="btn btn-light font-weight-bold table thead th border rounded">
                             <i class="fa-solid fa-code"></i>&nbsp;
-                            Página da aplicação
-                        </button>
-                    </a>
-                </div>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel class="m-4">
-                <mat-expansion-panel-header>
-                <mat-panel-title class="masthead-subheading d-flex justify-content-center">
-                    <span class="text-center subheading m-2">Fatec Mauá Job Newsletter API</span>
-                </mat-panel-title>
-                </mat-expansion-panel-header>
-                
-                <div class="lead m-2 p-4">
-                    <p class="p-1">
-                        <i class="fa-solid fa-circle-question"></i> MVP de um TCC para a FATEC - Mauá e seus alunos registrar e divulgar as vagas de
-                        emprego e estágio de maneira mais prática (back-end).
-                    </p>
-
-                    <a href="https://fatecmauajobnewsletter.azurewebsites.net/swagger" target="_blank">
-                        <button class="btn btn-light font-weight-bold table thead th border rounded">
-                            <i class="fa-solid fa-code"></i>&nbsp;
-                            Swagger da API
-                        </button>
-                    </a>
-                </div>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel class="m-4">
-                <mat-expansion-panel-header>
-                <mat-panel-title class="masthead-subheading d-flex justify-content-center">
-                    <span class="text-center subheading m-2">API Knowledge</span>
-                </mat-panel-title>
-                </mat-expansion-panel-header>
-                
-                <div class="lead m-2 p-4">
-                    <p class="p-1">
-                        <i class="fa-solid fa-circle-question"></i> API para retorno das informações da minha base de conhecimento para popular o projeto Web Resume (está página).
-                    </p>
-                    <a href="https://webapiknowledge.azurewebsites.net/swagger" target="_blank">
-                        <button class="btn btn-light font-weight-bold table thead th border rounded">
-                            <i class="fa-solid fa-code"></i>&nbsp;
-                            Swagger da API
-                        </button>
-                    </a>
-                </div>
-            </mat-expansion-panel>
-
-            <mat-expansion-panel class="m-4">
-                <mat-expansion-panel-header>
-                <mat-panel-title class="masthead-subheading d-flex justify-content-center">
-                    <span class="text-center subheading m-2">API Email Sender</span>
-                </mat-panel-title>
-                </mat-expansion-panel-header>
-                
-                <div class="lead m-2 p-4">
-                    <p class="p-1">
-                        <i class="fa-solid fa-circle-question"></i>  API para contato no meu e-mail pessoal a partir dos meus projetos (utilizada na aba de contato).
-                    </p>
-                    <a href="https://webapiemail.azurewebsites.net/swagger" target="_blank">
-                        <button class="btn btn-light font-weight-bold table thead th border rounded">
-                            <i class="fa-solid fa-code"></i>&nbsp;
-                            Swagger da API
+                            {{ project.textButton }}
                         </button>
                     </a>
                 </div>
@@ -88,16 +28,14 @@
         </div>
 
         <h3 class="mb-0">Veja o código fonte</h3>
-
         <div class="text-center mt-4">
-            <a class="btn btn-lg btn-outline-secondary m-2" href="https://github.com/lucasvieiravicente/WebResumeAngular" target="_blank">
-                <i class="fab fa-fw fa-github mr-2"></i>
-                Desta página
-            </a>
-
-            <a class="btn btn-lg btn-outline-secondary m-2" href="https://github.com/lucasvieiravicente" target="_blank">
-                <i class="fab fa-fw fa-github mr-2"></i>
-                Demais repositórios
+            <a 
+                *ngFor="let repository of repositories; index as i"
+                class="btn btn-lg btn-outline-secondary m-2"
+                href="{{ repository.url }}"
+                target="_blank"
+            >
+                <i class="fab fa-fw fa-github mr-2"></i> {{ repository.description }}
             </a>
         </div>                
     </div>
