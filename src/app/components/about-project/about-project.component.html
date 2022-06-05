@@ -3,7 +3,7 @@
         <h2 class="mb-3">Projetos</h2>
         <div class="subheading mb-3">Projetos pessoais</div>
         <div class="container mb-5">
-            <mat-expansion-panel 
+            <mat-expansion-panel
                 class="m-4" 
                 *ngFor="let project of projects; index as i"
             >
@@ -13,10 +13,10 @@
                     </mat-panel-title>
                 </mat-expansion-panel-header>
                 
-                <div class="flex-grow-1 m-2 p-4">
-                    <p class="text-justified">{{ project.description }}</p>                    
+                <div id="info" class="flex-grow-1 m-2">
+                    <p class="lead text-justified">{{ project.description }}</p>                    
                     <a href="{{ project.url }}" target="_blank">
-                        <button class="btn btn-light table thead th border rounded">
+                        <button class="lead btn btn-light table thead th border rounded">
                             <i class="fa-solid fa-code"></i>&nbsp;
                             {{ project.textButton }}
                         </button>
