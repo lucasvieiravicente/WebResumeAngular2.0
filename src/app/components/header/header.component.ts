@@ -23,10 +23,10 @@ export class HeaderComponent {
   scroll(elementId: string) {
     let position: number | undefined;
     
-    if(elementId === 'top') {
-      position = 150;
+    if(elementId === 'about') {
+      position = 1;
     } else {
-      position = document.getElementById(elementId)?.offsetTop;
+      position = (document.getElementById(elementId)?.offsetTop ?? 0) + 100;
     }
 
     if(position)
