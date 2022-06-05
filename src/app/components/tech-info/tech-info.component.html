@@ -1,15 +1,23 @@
-<span class="d-flex justify-content-center">
-    <h1 mat-dialog-title class="masthead-subheading font-weight-bold">{{ data.title }}</h1>
-</span>
-<div mat-dialog-content class="text-uppercase">
-    <p class="text-justify"><span class="font-weight-bold">Descrição: </span>{{ data.firstDescription }}</p>
-    <p class="text-justify"><span class="font-weight-bold">Meu conhecimento: </span>{{ data.secondDescription }}</p>
-    <p class="text-center">Para mais informações clique <a [href]="getSearchUrl()" target="_blank">aqui</a></p>
-</div>
-<div mat-dialog-actions class="text-center">
-    <div class="btn btn-light btn-lg" (click)="closeDialog()">
+<div class="container mx-auto">
+    <button class="btn btn-light btn-sm" id="closeButton" (click)="closeDialog()">
         <div class="text-danger font-weight-bold">
             <i class="far fa-window-close"></i>
         </div>
+    </button>
+    <span class="d-flex justify-content-center">
+        <h1 mat-dialog-title class="masthead-subheading font-weight-bold">{{ data.title }}</h1>
+    </span>
+    <div mat-dialog-content id="content" class="text-justify lead">
+        <p><span id="strong">Descrição: </span>{{ data.firstDescription }}</p>
+        <p><span id="strong">Meu conhecimento: </span>{{ data.secondDescription }}</p>
+    </div>
+    <div mat-dialog-actions class="text-center d-flex justify-content-around">
+        <a [href]="getSearchUrl()" target="_blank">
+            <button class="btn btn-light btn-lg" id="button">
+                <div class="lead">
+                    Mais informações sobre {{ data.title }}
+                </div>
+            </button>
+        </a>
     </div>
 </div>
