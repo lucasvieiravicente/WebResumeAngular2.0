@@ -2,13 +2,15 @@
 *ngIf="!hasCookie"
 @fadeSlideInOut 
 class="cookiesWarningDiv">
-    <div class="text-center">
-        <p id="cookieContent">
-            Esta página utiliza cookies para controle do acesso ao site
-            <br />
-            Caso concorde com o uso dos mesmos só {{ message }} no monstrinho do cookie ao lado.
-            <br />
-        </p>
+    <div id="cookieContent">
+        <div id="cookieDescription">
+            <p>
+                Esta página utiliza cookies para controle do acesso ao site
+                <br />
+                Caso concorde com o uso dos mesmos só {{ message }} no monstrinho do cookie ao lado.
+                <br />
+            </p>
+        </div>
         <div id="cookieImage">
             <img src="assets/images/cookieImage.png" alt="Cookie Image" title="Cookie Image" (click)="setCookie()"/>
         </div>
