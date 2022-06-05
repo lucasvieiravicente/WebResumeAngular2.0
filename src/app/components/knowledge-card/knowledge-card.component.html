@@ -11,11 +11,10 @@
         <mat-card-title class="subheading mb-2">{{ value.title }}</mat-card-title>
       </mat-card-header>
 
-      <div class="p-3 text-center card-image">
-        <img class="img-fluid" mat-card-image [src]="getBase64AsImage(value.fileData)" [alt]="getAltDescription(value.title)">
-      </div>
-
       <mat-card-content class="text-center mt-3">
+        <div class="p-3 text-center card-image">
+          <img class="img-fluid" mat-card-image [src]="getBase64AsImage(value.fileData)" [alt]="getAltDescription(value.title)">
+        </div>
         <button class="btn btn-light font-weight-bold table thead th border rounded" (click)="openInfo(i)">
           Ver mais
           <i class="fas fa-search"></i>
