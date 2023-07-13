@@ -13,7 +13,11 @@ export class AboutComponent {
   }
 
   public getProfessionalTime(): number {
-    return new Date().getFullYear() - 2017
+    return new Date().getFullYear() - 2019
+  }
+
+  public getExperienceTime(): number {
+    return new Date().getFullYear() - 2016
   }
 
   private createSocialMedias(): void {
