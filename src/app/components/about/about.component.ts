@@ -24,7 +24,7 @@ export class AboutComponent {
     this.socialMedias = [
       new SocialMedia("https://www.linkedin.com/in/lucas-vieira-vicente", "fab fa-linkedin-in"),
       new SocialMedia("https://github.com/lucasvieiravicente", "fab fa-github"),
-      new SocialMedia("https://api.whatsapp.com/send?phone=5511983773017&text=Olá%20,%20tudo%20bem?%20Te%20encontrei%20no%20seu%20currículo%20online", "fab fa-whatsapp")
+      new SocialMedia("https://api.whatsapp.com/send?phone=5511983773017&text=Olá,%20tudo%20bem?%20Te%20encontrei%20no%20seu%20currículo%20online", "fab fa-whatsapp")
     ];
   }
 
